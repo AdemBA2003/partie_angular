@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Ajouter un étudiant</h2>
+  <form *ngIf="!form">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <!-- <label>CIN</label>
+      <input type="text" [(ngModel)]="newE.Id" name="Id" class="form-control"> -->
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Nom</label>
+      <input type="text" [(ngModel)]="newE.name" name="name" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Prenom</label>
+      <input type="text" [(ngModel)]="newE.prenom" name="prenom" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Matiere</label>
+      <input type="text" [(ngModel)]="newE.matiere" name="matiere" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Note</label>
+      <input type="text" [(ngModel)]="newE.note" name="note" class="form-control">
+    </div>
+    <div class="mt-8">
+      <button type="submit" (click)="ajouterEtudiant(newE)" class="btn btn-success">Ajouter</button>
+    </div>
+
+  </form>
+</div>

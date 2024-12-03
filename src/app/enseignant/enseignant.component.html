@@ -1,0 +1,187 @@
+<!-- <ul *ngFor="let e of list_Ensei " style="display: flex; justify-content: space-between; align-items: center;">
+  <li>{{ e.Nom }}</li>
+  <li>{{ e.Prenom }}</li>
+  <li>{{ e.list_departement }}</li>
+  <li>{{ e.list_gard }}</li>
+</ul>
+
+ -->
+
+ <!-- <div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading"  class="btn btn-info" class="text-info" >Liste des produits</div>
+        <div class="panel-body">
+            <button class="btn btn-primary">Produits</button>
+        </div>
+    </div>
+</div>
+
+ -->
+ <!-- <br><br><br><br><br><br><br> -->
+<!-- <center>
+ <div>
+    <table border="1">
+        <th   style="  color: white ; background-color: #095a9d">  List des etudiants</th>
+        <th   style="  color: white ; background-color: #095a9d" ></th>
+        <tr >
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+            <td>slm</td>
+        </tr>
+    </table>
+ </div>
+</center> -->
+
+<!-- <div class="box">
+    <h2>List des ensiegnants</h2>
+    <ul *ngFor="let e of list_Ensei">
+        <li><span><img src="../assets/img/enseignant.png" width="200%" height="200%"
+                    style="padding-right: 50%;"></span>
+                    {{ e.Nom }} {{ e.Prenom }} {{ e.list_departement }} {{
+            e.list_gard }} </li>
+
+        <a type="button" class="btn btn-outil-danger" (click)="deleteEnseignant(e.Id)">
+            <img src="../assets/img/red-delete-10437.png" height="30" width="30"></a>
+    </ul>
+
+</div> -->
+<div class="text-center">
+    <a type="button" href="/addEnseignant" class="btn btn-success">Ajouter</a>
+    <br>
+  </div>
+  
+
+<main>
+ 
+    <ol *ngFor="let e of list_Ensei" class="gradient-list">
+      <li style="display: flex; justify-content: space-between; align-items: center;">
+  
+        {{ e.Nom }} {{ e.Prenom }} 
+   
+        <div class="action-buttons">
+            <a type="button" class="btn btn-outil-danger nav-link" (click)="deleteEnseignant(e.id)">
+                <img src="../assets/img/red-delete-10437.png" height="30" width="30">
+              </a>
+          <a type="button" (click)="updateEnseignant(e.Id)">
+            <img src="../assets/img/pencil-9479.png" height="30" width="30"></a>
+  
+  
+        </div>
+      </li>
+  
+    </ol>
+   
+  </main>
+<br>
+<!-- <center> <a href="/addEnseignant" class="btn btn-success" type="button">Ajouter </a> </center> -->
+
+<br><br><br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- <main class="py-6 bg-surface-secondary">
+    <div class="container-fluid">
+       
+        <div class="row g-6 mb-6">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Enseignant</span>
+                                <span class="h3 font-bold mb-0">{{nombreEnseignants}}</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-0 text-sm">
+                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                <i class="bi bi-arrow-up me-1"></i>13%
+                            </span>
+                            <span class="text-nowrap text-xs text-muted">Departements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Liste gardes</span>
+                                <span class="h3 font-bold mb-0">215</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-0 text-sm">
+                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                <i class="bi bi-arrow-up me-1"></i>30%
+                            </span>
+                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <span class="h6 font-semibold text-muted text-sm d-block mb-2"> Departements</span>
+                                <span class="h3 font-bold mb-0">1.400</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-0 text-sm">
+                            <span class="badge badge-pill bg-soft-danger text-danger me-2">
+                                <i class="bi bi-arrow-down me-1"></i>
+                            </span>
+                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Lists de
+                                    Departements</span>
+                                <span class="h3 font-bold mb-0">95%</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                    <i class="bi bi-minecart-loaded"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 mb-0 text-sm">
+                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                <i class="bi bi-arrow-up me-1"></i>10% -->

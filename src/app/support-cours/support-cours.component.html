@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  
+    
+  </head>
+  <body>
+    <!--- Paste HTML below here -->
+        <div class="container">
+        <div class="left-section"></div>
+        <div class="right-section">
+            <div class="login-container">
+                <form class="login-form">
+                    <h2 class="login-title"><i class="fas fa-user-circle"></i> Connexion</h2>
+                    <div class="form-control">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" placeholder="Login" id="username" required [(ngModel)]="user.Email" [ngModelOptions]="{standalone: true}" > 
+                    </div>
+                    <div class="form-control">
+                        <i class="fas fa-lock icon"></i>
+                        <input type="password" placeholder="Mot de passe" id="password" [(ngModel)]="user.mot_pass" [ngModelOptions]="{standalone: true}" />
+
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox"  id="rememberMe" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    
+                    <div class="social-login">
+                        <i class="fab fa-google social-icon"></i>
+                        <i class="fab fa-facebook-f social-icon"></i>
+                        <i class="fab fa-twitter social-icon"></i>
+                    </div>
+                    <div  class="text-err">
+                        <p *ngIf="this.erreur==true" >Login et/ou mot de passe incorrect</p>
+                       </div>
+                    <button type="submit" (click)="connected()" >Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+  </body>
+</html>

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main >
+    <div class="main">
+  
+    
+    <center>
+     
+      <a type="button" (click)="addEtudiant(etudiant)"  class= "btn btn-success" *ngIf="authServ.testerAdmin()" >Ajouter </a>
+    <br>
+     
+    </center>  <!-- Modal pour le formulaire de réclamation -->
+    
+    
+    <ol *ngFor="let student of list_Etud" class="gradient-list">
+      <li  href="/ReleveDeNote"  style="display: flex; justify-content: space-between; align-items: center;">
+      {{ student.name }} {{ student.prenom }}  
+
+  
+        <div   class="action-buttons">
+          <a  type="button" class="btn btn-outil-danger" (click)="deleteEtudiant(student.id)" href="/ReleveDeNote" *ngIf="authServ.testerAdmin()" class="nav-link">
+            <img src="../assets/img/red-delete-10437.png" height="30" width="30"></a>
+          <a  type="button" (click)="updateEtudiant(student.id)"  *ngIf="authServ.testerAdmin()" >
+            <img src="../assets/img/pencil-9479.png" height="30" width="30"></a>
+        </div>
+      </li>
+    </ol>
+  </div>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="showPhrase" [@fadeInOut] class="titre">
+  <p>Les exellents etudiants</p>
+</div> -->
+
+
+
+
+
+
+<!-- <table class="table table-hover">
+  <thead>
+    <tr>
+      <th ></th>
+      <th >Nom</th>
+      <th >Prenom</th>
+      <th >moyenne</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of list_Etud" >
+      <th scope="row"><img src ="../assets/img/admin.png" width="8%"    right="8%" ></th>
+      <td> {{ student.name }}   </td>
+      <td> {{ student.prenom }}  </td>
+      <td>{{ student.Note }} </td>
+    </tr> 
+
+  </tbody>
+</table>    -->

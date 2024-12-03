@@ -1,0 +1,40 @@
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .widget {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .widget:hover {
+    background-color: lightgreen;
+  }
+
+
+
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    animation: move 2s infinite alternate; /* 2 secondes, en boucle infinie, en alternance */
+  }
+  
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: calc(100% - 100px); /* Calcul pour que la boîte atteigne le bord droit de l'écran */
+    }
+  }
+  
